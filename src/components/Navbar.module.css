@@ -1,0 +1,189 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: var(--space-md) 0;
+    color: white;
+    pointer-events: none;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+.logo {
+    pointer-events: auto;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-sm);
+    pointer-events: auto;
+}
+
+.btnPill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btnPill:hover {
+    transform: scale(1.05);
+}
+
+.langToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 14px;
+    height: 46px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    font-family: var(--font-primary);
+    white-space: nowrap;
+}
+
+.langToggleLight {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.langToggleLight:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+}
+
+.langToggleDark {
+    background-color: transparent;
+    color: #000000;
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+.langToggleDark:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: #000;
+}
+
+.btnWhite {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btnWhite:hover {
+    background-color: #f0f0f0;
+}
+
+.btnDark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btnDark:hover {
+    background-color: #333333;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #000;
+    margin-right: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btnWhite:hover .dot {
+    background-color: #000;
+}
+
+.btnDark:hover .dot {
+    background-color: #fff;
+}
+
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeButton {
+    position: absolute;
+    top: 40px;
+    right: var(--space-lg);
+    background: none;
+    border: none;
+    color: #fff;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.menuNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.menuNav a {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.menuNav a:hover {
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .navContainer {
+        padding: 0 var(--space-md);
+    }
+}

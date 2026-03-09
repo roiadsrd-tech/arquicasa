@@ -1,0 +1,84 @@
+.clientsSection {
+    padding: var(--space-xl) 0;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.labelContainer {
+    margin-bottom: var(--space-lg);
+}
+
+.label {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    font-weight: 500;
+}
+
+.marqueeWrapper {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    /* Optional edge masks to fade logos out at the sides */
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marqueeContent {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+
+/* Pause the animation on hover for better UX */
+.marqueeContent:hover {
+    animation-play-state: paused;
+}
+
+.logoItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4vw;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.5);
+    /* Neutralize brand colors for a cohesive architecture agency look */
+    transition: all 0.4s ease;
+}
+
+.logo:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Shift by exactly half since we duplicated the array */
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 40px;
+    }
+
+    .logoItem {
+        padding: 0 6vw;
+    }
+}

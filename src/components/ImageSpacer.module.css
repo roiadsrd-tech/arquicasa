@@ -1,0 +1,30 @@
+.spacerWrapper {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    /* allows parallax */
+    will-change: transform;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+@media (max-width: 768px) {
+    .spacerWrapper {
+        height: 60vh;
+    }
+}

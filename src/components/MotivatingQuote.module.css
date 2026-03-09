@@ -1,0 +1,85 @@
+.quoteSection {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    /* Break out of container to be full viewport width */
+    background-color: #0c0c0c;
+    /* Deep black background */
+    padding: 15vw 5%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.linesBackground {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 60%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.verticalLine {
+    width: 1px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    /* Stagger heights a bit if we want, but simple 100% works nicely */
+    height: 100%;
+}
+
+.verticalLine:nth-child(even) {
+    height: 80%;
+}
+
+.verticalLine:nth-child(3n) {
+    height: 90%;
+}
+
+.verticalLine:nth-child(5n) {
+    height: 110%;
+}
+
+.quoteContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.quoteText {
+    font-family: inherit;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.15;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.dot {
+    font-size: 0.8em;
+    vertical-align: middle;
+    margin-right: -0.1em;
+}
+
+.highlight {
+    color: #ffffff;
+}
+
+.muted {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .quoteSection {
+        padding: 25vw 5%;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
