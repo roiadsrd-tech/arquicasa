@@ -1,5 +1,5 @@
 .process {
-    padding: calc(var(--space-xl) * 2) 0;
+    padding: calc(var(--space-xl) * 1.5) 0;
     background-color: var(--color-bg);
 }
 
@@ -83,10 +83,20 @@
     .container {
         grid-template-columns: 1fr;
         gap: var(--space-xl);
+        padding: 0 20px;
     }
 
     .header {
         position: static;
         margin-bottom: var(--space-md);
+    }
+
+    .stepItem {
+        gap: var(--space-md);
+        padding: var(--space-lg) 0;
+    }
+
+    .stepContent h3 {
+        font-size: 1.4rem;
     }
 }

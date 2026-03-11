@@ -69,3 +69,17 @@
         flex: 0 0 45vw;
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .slide {
+        flex: 0 0 85vw;
+    }
+
+    .carousel {
+        padding: 0 20px;
+    }
+}

@@ -56,4 +56,12 @@
     .logoImg {
         height: 30px;
     }
+
+    .logosSection {
+        padding: 24px 0 60px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
 }

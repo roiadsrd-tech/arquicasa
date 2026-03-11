@@ -43,7 +43,7 @@
 }
 
 .main h2 {
-    font-size: clamp(4rem, 10vw, 8rem);
+    font-size: clamp(2.5rem, 10vw, 8rem);
     font-weight: 700;
     line-height: 0.9;
     margin: 0;
@@ -160,10 +160,39 @@
 }
 
 @media (max-width: 768px) {
+    .footer {
+        padding: var(--space-xl) 0 var(--space-md);
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .main {
+        padding: var(--space-xl) 0;
+        min-height: auto;
+        margin-bottom: var(--space-xl);
+    }
+
     .bottom {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: var(--space-md);
+        text-align: center;
+    }
+
+    .email {
+        font-size: 0.9rem;
+        word-break: break-all;
+    }
+
+    .btnGroup {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bigTitleWrapper {
+        margin-top: var(--space-xl);
     }
 }
 

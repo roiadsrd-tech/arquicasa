@@ -8,7 +8,7 @@
 
 /* Intro Section */
 .introSection {
-    padding: 100px 5% 80px;
+    padding: 80px 5% 60px;
     position: relative;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .introHeadline {
-    font-size: clamp(4rem, 10vw, 9rem);
+    font-size: clamp(2.8rem, 10vw, 9rem);
     font-weight: 700;
     line-height: 0.9;
     letter-spacing: -0.05em;
@@ -164,7 +164,36 @@
 
 @media (max-width: 900px) {
     .projectsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4vw;
+        row-gap: 40px;
+    }
+
+    .introSection {
+        padding: 60px 5% 40px;
+    }
+
+    .postProjectsSection {
+        margin-top: 80px;
+        min-height: 40vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .projectsGrid {
         grid-template-columns: 1fr;
-        row-gap: 60px;
+        row-gap: 48px;
+    }
+
+    .introSection {
+        padding: 50px 5% 30px;
+    }
+
+    .worksWrapper {
+        padding-bottom: 80px;
+    }
+
+    .downloadWrapper {
+        margin-top: 50px;
     }
 }

@@ -25,6 +25,7 @@
 
 @media (max-width: 768px) {
     .spacerWrapper {
-        height: 60vh;
+        height: 50vh;
+        min-height: 200px;
     }
 }

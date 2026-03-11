@@ -53,7 +53,7 @@
 }
 
 .content h1 {
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(2.8rem, 11vw, 7rem);
     line-height: 0.85;
     font-weight: 700;
     margin: 0;
@@ -124,17 +124,22 @@
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 var(--space-md);
+        padding: 0 20px;
         flex-direction: column;
         align-items: flex-start;
+        gap: var(--space-md);
     }
 
     .meta {
         text-align: left;
-        margin-top: var(--space-lg);
+        margin-top: 0;
     }
 
     .content {
-        padding-bottom: var(--space-xxl);
+        padding-bottom: var(--space-xl);
+    }
+
+    .scrollIndicator {
+        display: none;
     }
 }

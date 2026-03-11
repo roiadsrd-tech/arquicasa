@@ -85,16 +85,16 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(4rem, 10vw, 9rem);
+  font-size: clamp(2.8rem, 10vw, 9rem);
   letter-spacing: -0.05em;
 }
 
 h2 {
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(2.2rem, 8vw, 7rem);
 }
 
 h3 {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(1.25rem, 4vw, 3rem);
 }
 
 p {
@@ -203,6 +203,19 @@ img {
 
 @media (max-width: 768px) {
 
+  :root {
+    --space-sm: calc(var(--spacing-unit) * 1.5);
+    /* 12px */
+    --space-md: calc(var(--spacing-unit) * 2.5);
+    /* 20px */
+    --space-lg: calc(var(--spacing-unit) * 4);
+    /* 32px */
+    --space-xl: calc(var(--spacing-unit) * 8);
+    /* 64px */
+    --space-xxl: calc(var(--spacing-unit) * 12);
+    /* 96px */
+  }
+
   .grid-cols-2,
   .grid-cols-3 {
     grid-template-columns: 1fr;
@@ -210,5 +223,9 @@ img {
 
   .container {
     padding: 0 var(--space-md);
+  }
+
+  p {
+    font-size: 1rem;
   }
 }

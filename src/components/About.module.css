@@ -80,3 +80,14 @@
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .about {
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-lg);
+    }
+}

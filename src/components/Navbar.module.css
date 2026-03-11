@@ -184,6 +184,25 @@
 
 @media (max-width: 768px) {
     .navContainer {
-        padding: 0 var(--space-md);
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .actions {
+        gap: 8px;
+    }
+
+    .btnPill {
+        padding: 10px 16px;
+        font-size: 0.75rem;
+    }
+
+    .langToggle {
+        padding: 0 10px;
+        height: 38px;
+        font-size: 0.7rem;
     }
 }
